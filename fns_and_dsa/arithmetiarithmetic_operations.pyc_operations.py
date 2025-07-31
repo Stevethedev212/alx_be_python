@@ -12,19 +12,4 @@ def perform_operation(num1: float, num2: float, operation: str):
             return "Error: Division by zero"
         return num1 / num2
     else:
-        return "Error: Invalid operation"
-    
-# Example usage 
-if __name__ == "__main__":
-    # Get user input
-    num1 = float(input("Enter the first number: "))
-    num2 = float(input("Enter the second number: "))
-    operation = input("Choose the operation (add, subtract, multiply, divide): ")
-
-    # Perform calculation
-    result = perform_operation(num1, num2, operation)
-    
-    if isinstance(result, str):
-        print(result)  # Print error message
-    else:
-        print(f"The result is {result}.")
+      return "Error: Invalid operation"
