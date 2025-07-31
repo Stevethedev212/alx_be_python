@@ -2,7 +2,7 @@
 
 shopping_list = []  
 
-def display_menu():
+def display_menu(): 
     print("\nShopping List Manager")
     print("1. Add an item")
     print("2. Remove an item")
@@ -35,16 +35,21 @@ def view_list():
 
 def main():
     while True:
-        display_menu()
-        choice = input("Choose an option (1-4): ").strip()
+        display_menu() 
 
-        if choice == "1":
+        try:
+            choice = int(input("Choose an option (1-4): ").strip())  
+        except ValueError:
+            print("Invalid input. Please enter a number between 1 and 4.")
+            continue
+
+        if choice == 1:
             add_item()
-        elif choice == "2":
+        elif choice == 2:
             remove_item()
-        elif choice == "3":
+        elif choice == 3:
             view_list()
-        elif choice == "4":
+        elif choice == 4:
             print("Goodbye!")
             break
         else:
